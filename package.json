@@ -5,11 +5,13 @@
   "author": "Kizito Akhilome <hovkard@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
-    "cover": "npm test -- --coverage"
+    "cover": "npm test -- --coverage",
+    "heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
